@@ -1,26 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 html{
   height: 100%;
-  background-image: linear-gradient(#a19f9f,#bdbaba);
+  background-image: linear-gradient(#8f8787,#d0cfcf);
   background-repeat: no-repeat;
   font-family: sans-serif;
   color: #0f222d;
   background-size: auto;
 }
-.container{
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
+
+.main{
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
 }
 h1{
   text-align: center;
   color: #fff;
-  margin-top: 20px;
 }
 form{
   background-color: #fff;
@@ -37,19 +33,21 @@ input[type="text"]{
 }
 button{
   font-size: 1.5em;
-  color: #73b9e4;
+  color: #445764;
   background-color: #fff;
   outline: 0;
   border: none;
   width: 50px;
+
 }
-.taskboard{
+.tasksBoard{
   background-color: #fff;
   margin-top: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 40px;
   display: none;
+
 }
 ul{
   list-style: none;
@@ -64,18 +62,19 @@ li{
 a{
   float: right;
   text-align: right;
-  color: #ff6161;
+  color: #445764;
   font-size: 1.2em;
   cursor: pointer;
 }
 .delete{
-  background-color: #ff6161;
+  background-color: #445764;
   padding: 0px 3px 0px 3px;
   color: #fff;
   cursor: pointer;
 }
+
 @media (max-width: 500px) {
-  .container{
+  .main{
     margin: auto;
     width: 100%;
   }
