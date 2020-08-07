@@ -2,17 +2,20 @@ loadEvents();
 // load every event in the page
 function loadEvents() {
   document.querySelector('form').addEventListener('submit', submit);
+  document.getElementById('clear').addEventListener('click', clearList);
+  // recently added
+  document.querySelector('ul').addEventListener('click', deleteOrTick);
+
 }
 // submit data function
 function submit(e) {
   e.preventDefault();
   let input = document.querySelector('input');
-  if (input.value != '')
+  if (input.value !== '')
     addTask(input.value);
-  input.value = '';
+  input.value === '';
 }
 
-// add tasks
 function addTask(task) {
   let ul = document.querySelector('ul');
   let li = document.createElement('li');
@@ -21,28 +24,12 @@ function addTask(task) {
   document.querySelector('.tasksBoard').style.display = 'block';
 }
 
-loadEvents();
-// load every event in the page
-function loadEvents() {
-  document.querySelector('form').addEventListener('submit', submit);
-  // recently added
-  document.getElementById('clear').addEventListener('click', clearList);
-
-}
 
 function clearList(e) {
   // setting the ul innerHML to an empty string
   let ul = document.querySelector('ul').innerHTML = '';
 }
-loadEvents();
-// load every event in the page
-function loadEvents() {
-  document.querySelector('form').addEventListener('submit', submit);
-  document.getElementById('clear').addEventListener('click', clearList);
-  // recently added
-  document.querySelector('ul').addEventListener('click', deleteOrTick);
 
-}
 // deleteTick
 function deleteOrTick(e) {
   if (e.target.className == 'delete')

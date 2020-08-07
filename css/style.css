@@ -38,6 +38,7 @@ button{
   outline: 0;
   border: none;
   width: 50px;
+  cursor: pointer;
 
 }
 .tasksBoard{
